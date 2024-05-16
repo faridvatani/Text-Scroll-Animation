@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Martian Mono', monospace;
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 2px solid #1c1c1c75;
+  transition: 0.5s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1000;
+}
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  background-color: #1c1c1c;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #1c1c1c;
+}
+
+::selection {
+  color: #fff;
+  background: #1c1c1c;
+}
+
+.sticky-bar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 50%;
+  padding: 1em;
+  transform: translateY(-50%);
+  mix-blend-mode: difference;
+}
+
+.sticky-bar .item:nth-child(1),
+.sticky-bar .item:nth-child(3) {
+  flex: 2;
+}
+
+.sticky-bar .item:nth-child(3) {
+  text-align: right;
+}
+
+.sticky-bar .item:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+
+.sticky-bar .item p {
+  color: #fff;
+  font-size: 1.25vw;
+}
+
+section.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.clients {
+  width: 100%;
+  padding: 10em 1em;
+  background: #fff;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo p {
+  font-size: 30px;
+}
+
+.logo p:hover {
+  color: #808080;
+}
+
+.logo:first-child {
+  align-items: end;
+  color: #000;
+}
+
+.logo:last-child {
+  align-items: start;
+}
+
+section .footer {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .sticky-bar .item p {
+    font-size: 2vw;
+  }
+
+  .logo p {
+    font-size: 2 0px;
+  }
+
+  section .footer {
+    height: 500vh;
+  }
+}
